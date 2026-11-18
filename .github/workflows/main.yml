@@ -23,9 +23,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
       - name: Build APK
         working-directory: ${{ env.PROJECT_DIR }}
         run: |
@@ -37,4 +34,3 @@ jobs:
         with:
           name: SharafGold-APK
           path: "**/build/outputs/apk/debug/*.apk"
-          
